@@ -46,3 +46,6 @@ for(key in obj)
         console.log(`${key}:${obj[key]}`);
     }
 for(value of arr) console.log(value);
+arr.forEach(element => {
+    console.log(element*element);
+});
