@@ -6,6 +6,7 @@ let number_No_Strict = 100;
 let number_With_Strict = new Number(100);
 // console.log(number_With_Strict);
 //while we use Number class to create a number type object it gives us sevral properties that we can use for further uses. as string has its own protypes number also have some protypes.
+
 //some of them that we use many times.
 /*
 1.Number.toString()-->Changes the type of number to string.

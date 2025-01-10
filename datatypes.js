@@ -34,3 +34,16 @@ console.log(typeof null)//object this is problem with js because when we print t
 2.Array=>object-->["omkar","mallikarjun","gopchade"]
 3.object=>object-->let a ={studId=23,studName="omkar"}key-value pairs.
 */
+// let a = 10
+// {
+//     let a = 20
+// }
+// console.log(a);
+// var b = 10
+// {
+//     var b = 20
+// }
+// console.log(b);
+// let b = 20
+// const aa;
+// aa = 10

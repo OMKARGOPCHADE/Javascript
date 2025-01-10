@@ -1,5 +1,5 @@
-let arr = [1,2,3,4,true,"omkar"];
-//In Javascript there are two ways to create an array using [] and by using Arra() object;
+// let arr = [1,2,3,4,true,"omkar"];
+//In Javascript there are two ways to create an array using [] and by using Array() object;
 //As you can see in above array we have added numbers,boolean,and string values together in a single array.
 //1. in js array can store similar as well as disimilar elements.
 //2. in js arrays can be get modified after creation as well because js is dynamically typed language so in js every object can extend thier size accordingly.
@@ -8,8 +8,8 @@ let arr = [1,2,3,4,true,"omkar"];
 //2. deep copy-->gives copy of it not reference.
 // imp. array functions in js.
 //1.push(),2.pop()
-//1.unshift()-->uses to add value at first of array and shifts the remaining forward.
-//2. shift()-->delets or removes first element of array.
+//1.unshift()-->uses to add value at first of array and shifts the remaining forward. also return new length of array.
+//2. shift()-->delets or removes first element of array also modifies the orignal array. if array is empty returns undefined and also not modify the orignal array.
 //console.log(arr);
 //console.log(typeof arr);
 // console.log(arr.push(10));
@@ -20,9 +20,10 @@ let arr = [1,2,3,4,true,"omkar"];
 // console.log(arr);
 // console.log(arr.shift());
 // console.log(arr);
-const str_Array= ["omkar","gopchade","hitesh","chaudhary"];
+// const str_Array= ["omkar","gopchade","hitesh","chaudhary"];
 //as array is also object in js so it also has its protypes. in which we have plenty of protypes. e.g. arr.length-->gives length of array.
-const arr_Obj = new Array(10,20,40,30,50,60,70,80,90,100);
+// const arr_Obj = new Array(10,20,40,30,50,60,70,80,90,100);
+
 //console.log(arr_Obj.length);
 //In js we can ask questions to array means we can find out anything by asking to is something that i want know u includes in u.
 //console.log(str_Array.includes("omkar"));//return true/false if exists or not.
@@ -40,17 +41,18 @@ const arr_Obj = new Array(10,20,40,30,50,60,70,80,90,100);
 //e.g. arr[1,2,3,4,5] arr.splice(1,4) --> 2,3,4,5 as shown it removes index 1 to 4 as given parameters. and holds only remaining index 0 value -->1.
 // console.log(arr_Obj.splice(1,4));
 // console.log(arr_Obj);
-//join opertion on array. this method simply returns a string of a given array with the seprator as given in array.
-//e.g. arr['a','b','c'] let str = arr.join() --> a,b,c --> u will looks same but wait the type of this str is string now not array as it looks.
+// console.log(arr_Obj);
+//3. join opertion on array. this method simply returns a string of a given array with the seprator as given in parameter by default it uses (,).
+//e.g. str_Arrray['a','b','c'] let str = arr.join() --> a,b,c --> it will looks same but wait the type of this str is string now not array as it looks.
 // let str = str_Array.join()
-// console.log(typeof str);
+// console.log(str);
 
-//This Array.from() method is used create an array of given object seprated by comma(,).
+//4. Array.from() method is used create an array of given object seprated by comma(,).
 //Array.from()--> returns a new array of given object. but only takes on parameter.
 // console.log(Array.from(str_Obj));
 //Array.of() method is used to create a array of given objects. it takes mulitple objects as a parameter.
-let str_Obj = "Virat Kohli";
-let str_Obj2 = "Anushka Kohli";
+// let str_Obj = "Virat Kohli";
+// let str_Obj2 = "Anushka Kohli";
 // console.log(Array.of(str_Obj,str_Obj2));
 //if we do arr1.push(arr2);--> it will just add the given array as a new element of calling array because as js array can store any type of values together it treate new array as new element of previous array.
 // console.log(str_Array.concat(arr));
@@ -59,10 +61,47 @@ let str_Obj2 = "Anushka Kohli";
 //while when we use spread operator we can concat multiple arrays together as shown below.
 // as it returns new concated array we need to use a variable to store it.
 
-const my_New_Array = [...arr,...arr_Obj,...str_Array];
+// const my_New_Array = [...arr,...arr_Obj,...str_Array];
 // console.log(my_New_Array);
 //if we have array's inside array for multiple times and we want them all together in a single array we can use Array.flat()-->method.
 //we can give a range in it if the depth is long then use infinity. but for best practices use depth.
-const aa = [1,2,3,[14,5,6,4,[12,55,77]],[33,55,6]];
-const new_array = aa.flat(Infinity);
-console.log(new_array);
+// const aa = [1,2,3,[14,5,6,4,[12,55,77]],[33,55,6]];
+// const new_array = aa.flat(Infinity);
+// console.log(new_array);
+
+// 5. fill() it simply fills the array with the given element till the start -> end given.
+// if given start or end is -Ve then it will treat length()+start or length()+end.
+// fill_array = arr_Obj.fill(5,2,4)
+// console.log(arr_Obj);
+
+// isArray()--> is it array or not.
+
+// 6. lastIndexOf() --> where indexOf gives us first occurence index even if there are 2 or more occurences of same element in the array. so lastIndexOf gives us given element lastIndex if there are multiple occurences of same element in array.
+// let ab = [10,20,30,40]
+// console.log(ab.lastIndexOf(10));
+
+// 7. map()--> map method is used to work with each and every element of array. map simply returns new mapped array it do not modify the orignal array.
+// let maths = [1,4,9,16,25]
+// console.log(maths.map(Math.sqrt));
+// console.log(maths);
+
+// 8. pop()--> it just remove the last element and returns it. also modifies orignal array.
+// let ab = [10,20,30,40]
+// console.log(ab.pop());
+// console.log(ab);
+
+// 9. reverse()--> it just reverse the array. also modifies the orignal array.  
+// let ab = [10,20,30,40]
+// console.log(ab.reverse());
+// console.log(ab);
+
+// 10. split()--> it converts string to array with given seprator.
+// const st = "omkar gopchade"
+// console.log(st.split(' '));
+
+// 11. for of () --> it's type of loop to iterate each n every element of array.
+const fruits = ['apple','greps','banana']
+const uppercase = [] // empty array
+for(let a of fruits)
+    uppercase.push(a.toUpperCase());
+console.log(uppercase);
