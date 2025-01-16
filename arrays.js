@@ -100,8 +100,13 @@
 // console.log(st.split(' '));
 
 // 11. for of () --> it's type of loop to iterate each n every element of array.
-const fruits = ['apple','greps','banana']
-const uppercase = [] // empty array
-for(let a of fruits)
-    uppercase.push(a.toUpperCase());
-console.log(uppercase);
+// const fruits = ['apple','greps','banana']
+// const uppercase = [] // empty array
+// for(let a of fruits)
+//     uppercase.push(a.toUpperCase());
+// console.log(uppercase);
+
+let arr = [2,2]
+let arr2 = [2,2]
+arr.push(arr2)
+console.log(arr.includes(arr2));

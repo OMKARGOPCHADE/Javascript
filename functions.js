@@ -1,4 +1,4 @@
-//Int javascript there are three types of function creation.
+//In javascript there are three types of function creation.
 //1.Normal function
 function f1()
 {
@@ -54,9 +54,21 @@ const addtwo = (b)=>(b+2);//implicitly.
 //while writing two IIFE functions we need to add semicolon after first function end.
 //how to create IIFE function.
 
-(function chai(){
-    console.log("Hello this is chai IIFE");
-})();
-(()=>{console.log("This is aur code IIFE");})()
+// (function chai(){
+//     console.log("Hello this is chai IIFE");
+// })();
+// (()=>{console.log("This is aur code IIFE");})()
 
 //why IIFE for avoiding global scope polution.
+
+// // in js function if we pass a list of values while calling and when reciving while Fn defn then also we can use that values by using predefined word arguments.
+// (function example()
+// {
+//     let sum = 0;
+//     console.log(arguments);
+//     for(let a of arguments)//note: by default in for of loop first element is const if we dont use any decalring type for it.
+//         {
+//             sum+=a;
+//         }
+//         console.log(sum);
+// })(10,20,30,540);

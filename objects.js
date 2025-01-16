@@ -45,7 +45,7 @@ obj2.email="omkar@google.com"
 // console.log(new_Obj); 
 //using spred operator as used in array.-->{...obj1,...obj2,...etc}
 const new_Obj = {...jsobj,...obj2}
-//note when we have same keys in two different objects and we are trying concat them together then the second objt which has same key as fist object the value of second object is overide on the same key.
+//note when we have same keys in two different objects and we are trying to  concat them together then the second object which has same key as fist object the value of second object is overide on the same key.
 // console.log(new_Obj);
 // how to create nested objects..?
 const _nest_Obj = {
@@ -75,4 +75,54 @@ const _nest_Obj = {
 //Object de-structure
 // we can create a altername for object elements.how see
 const  {name:a}=obj2
-console.log(`name:${obj2.name} || a:${a}`);
+// console.log(`name:${obj2.name} || a:${a}`);
+
+// for in loop
+// for accesing values of object we can use for in loop.
+const UserName = {
+    name:'omkar',
+    user:'om123',
+    role:'software engineer'
+};
+// for (let i in UserName) console.log(UserName[i]);
+
+// in javascript all objects are instances of ojects. a typical object inherits propertis of object (including methods). with the help of object.create() mehtod.
+// e.g 
+const newObj = Object.create(UserName);
+// console.log(newObj);//although it look like an empty object . but the thing is it just hides the properties of the object.
+// console.log(newObj.name);//here is the proof that it looks like an empty but it has all the properties of the inherited object.
+
+// everything in js is treated as an object.
+// an every object has thier own prototypes.
+// e.g
+// console.log(Object.getPrototypeOf(newObj));
+
+// also we can define an a object as enmurable or non-enmurable.
+// let's see how we can do that.
+// const obj = Object.create({})//empty object 
+// Object.defineProperty(obj , 'book' , {
+//     // icon : '\/\/' ,
+//     // this thing is not work directly for making it usefull we have to use getters and setters properties.
+//     get : ()=> '\/\/',
+//     enumerable : true // for making this object iterable we have to use this enumerable property and also it has to be true.
+// });
+// console.log(obj);
+// for (const i in obj) console.log(obj[i]);
+
+// in js objects arrow functions has no designed context while using this for current object context.
+// e.g
+obj = {
+    comics:'marvel',
+    pen:'',
+    setPen: function(){
+        this.pen+='pentonic'
+    },
+    setPen2:()=>{
+        this.pen+='hey'
+    }
+};
+// obj.setPen();
+// console.log(obj); this is working properly.
+// obj.setPen2();
+// console.log(obj); no this is not working pen is not updated.
+// now we know where to use arrow fn and where to use normal fn in objects.
