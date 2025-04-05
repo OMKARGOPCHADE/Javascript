@@ -1,0 +1,126 @@
+/* Reset & base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Main container */
+  .container {
+    background-color: #ffffffcc;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Title */
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+  }
+  
+  /* Search input */
+  .searchData {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .searchData input {
+    padding: 12px 15px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    outline: none;
+    width: 65%;
+    font-size: 1rem;
+  }
+  
+  .searchData button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .searchData button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Weather & Location Data */
+  .cityWeatherData {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Cards */
+  .card {
+    flex: 1 1 45%;
+    background-color: #ffffffee;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card p:first-child {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .card p:last-child,
+  .card span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  /* Weather icon */
+  .card img {
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .card {
+      flex: 1 1 100%;
+    }
+  
+    .searchData {
+      flex-direction: column;
+    }
+  
+    .searchData input,
+    .searchData button {
+      width: 100%;
+    }
+  }
+  

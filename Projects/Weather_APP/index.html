@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather | App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Container for weather app card.-->
+    <div class="container">
+      <!-- Section for taking input city name. -->
+      <h1>Weather APP</h1>
+      <form onsubmit="getData(event)" class="searchData">
+        <input
+          type="search"
+          id="inputBox"
+          placeholder="Enter the city name: "
+        />
+        <button>Search</button>
+      </form>
+      <!-- Section for displaying city weather data -->
+      <section class="cityWeatherData">
+            <!-- Country Details -->
+            <div class="countryDetails details">
+                <!-- countryName -->
+                <div class="card">
+                    <p>Country Name</p>
+                    <p id="countryName">___</p>
+                </div>
+                <!-- StateName -->
+                <div class="card">
+                    <p>State Name</p>
+                    <p id="stateName">___</p>
+                </div>
+                <!-- cityName -->
+                <div class="card">
+                    <p>City Name</p>
+                    <p id="cityName">___</p>
+                </div>
+            </div>
+
+            <!-- Weather Details Displaying -->
+            <div class="weatherDetails details">
+                <!-- humidity -->
+                <div class="card">
+                    <p>Humidity</p>
+                    <p id="humidity">___</p>
+                </div>
+                <!-- WinSpeed -->
+                <div class="card">
+                    <p>WinSpeed</p>
+                    <p> <span id="winSpeed">___ </span>KMPH</p>
+
+                </div>
+                <!-- currentTemperature -->
+                <div class="card">
+                    <p>Temperature</p>
+                    <!-- unicode for degree symbol or percentage symbol. -->
+                    <p> <span id="currentTemperature">___ </span>&#8451;</p>
+                </div>
+                <!-- weatherCondtion -->
+                <div class="card">
+                    <img width="20px" id="logoImage" src="" alt="Icon">
+                    <p id="weatherStatus">___</p>
+                </div>
+            </div>
+            
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
